@@ -117,14 +117,14 @@ const Hero = () => {
           />
           <div className={styles.hero__wrapper_text}>
             <h1>
-              Hello I'am <span>Abdulaziz Toshpo'latov. Frontend</span>{" "}
+              {`Hello I'am`} <span>{`Abdulaziz Toshpo'latov. Frontend`}</span>{" "}
               <span>Developer</span> based in <span>Tashkent</span>
             </h1>
             <p>
-              I'm Evren Shah Lorem Ipsum is simply dummy text of the printing
+              {`I'm Evren Shah Lorem Ipsum is simply dummy text of the printing
               and typesetting industry. Lorem Ipsum has been the industry's
               standard dummy text ever since the 1500s, when an unknown printer
-              took a galley of type and scrambled it to specimen book.
+              took a galley of type and scrambled it to specimen book.`}
             </p>
             <div className={styles.hero__wrapper_text_socials}>
               <Magnetic>
