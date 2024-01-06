@@ -134,6 +134,10 @@
                         top: 0;
                         left: 0;
                         transition: .3s linear;
+                        -webkit-transition: .3s linear;
+                        -moz-transition: .3s linear;
+                        -ms-transition: .3s linear;
+                        -o-transition: .3s linear;
                         background-color: var(--p-text-primary);
                         clip-path: circle(3rem at 50% 200%);
                     }

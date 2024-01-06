@@ -21,6 +21,10 @@
         transform: translateX(-50%);
         border-radius: 25px;
         transition: all .25s linear;
+        -webkit-transition: all .25s linear;
+        -moz-transition: all .25s linear;
+        -ms-transition: all .25s linear;
+        -o-transition: all .25s linear;
     }
     &__logo{
         h1{
