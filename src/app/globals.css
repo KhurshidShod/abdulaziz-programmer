@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+}
+*,
+*::before,
+*::after{
+  box-sizing: border-box;
+}
+:root{
+  --primary-color: #ffffff;
+  --secondary-color: #000000;
+  --p-text-primary: #000000;
+  --p-text-secondary: #71717A;
+}
+body.dark{
+  --primary-color: #151515;
+  --p-text-primary: #ffffff;
+}
+.container{
+  max-width: 1440px;
+  padding-left: 80px;
+  padding-right: 80px;
+}
+@media (max-width: 1000px){
+  .container{
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
