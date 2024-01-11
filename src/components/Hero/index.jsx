@@ -117,7 +117,7 @@ const Hero = () => {
           />
           <div className={styles.hero__wrapper_text}>
             <h1>
-              {`Hello I'am`} <span>{`Abdulaziz Toshpo'latov. Frontend`}</span>{" "}
+              {`Hello I'am`} <span>{`Abdulaziz Toshpo'latov. Full-Stack`}</span>{" "}
               <span>Developer</span> based in <span>Tashkent</span>
             </h1>
             <p>

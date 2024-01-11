@@ -13,10 +13,14 @@
   --secondary-color: #000000;
   --p-text-primary: #000000;
   --p-text-secondary: #71717A;
+  --card-color: #000000;
+  --text-hover: #ffffff;
 }
 body.dark{
   --primary-color: #151515;
   --p-text-primary: #ffffff;
+  --card-color: #ffffff;
+  --text-hover: #000000;
 }
 .container{
   max-width: 1440px;
