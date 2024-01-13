@@ -12,6 +12,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    &__toggle{
+      background-color: transparent;
+      border: none;
+      outline: none;
+      cursor: pointer;
+    }
     .indicator{
         width: 50px;
         height: 3px;
@@ -26,6 +32,9 @@
         -moz-transition: all .25s linear;
         -ms-transition: all .25s linear;
         -o-transition: all .25s linear;
+        @media (max-width: 850px){
+          display: none;
+        }
     }
     &__logo{
         h1{
@@ -33,6 +42,24 @@
         }
     }
     ul {
+      @media (max-width: 850px){
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: fixed;
+        top: -100%;
+        left: 0;
+        right: 0;
+        overflow: hidden;
+        background-color: var(--primary-color);
+        transition: .3s linear;
+        opacity: 0;
+        &.headerOpen{
+          top: 90px;
+          opacity: 1;
+        }
+      }
       li {
         float: left;
         list-style: none;
@@ -41,6 +68,11 @@
         font-weight: 600;
         cursor: pointer;
         color: var(--p-text-primary);
+        @media (max-width: 850px){
+          float: none;
+          max-width: 200px;
+          text-align: center;
+        }
       }
     }
     &__actions{

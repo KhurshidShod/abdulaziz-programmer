@@ -4,10 +4,12 @@ import Magnetic from "@/commons/Magnetic";
 import styles from "./style.module.scss";
 import { BsMoonFill } from "react-icons/bs";
 import { FaSun } from "react-icons/fa";
+import { FaBarsStaggered } from "react-icons/fa6";
 
 const Header = () => {
     const [themeDark, setThemeDark] = useState(false);
   const sliderRef = useRef(null);
+  const [headerOpen, setHeaderOpen] = useState(false)
 
   const sliderMouseOver = (e) => {
     const left = e.currentTarget.offsetLeft;
@@ -26,10 +28,13 @@ const Header = () => {
       <div className="container">
         <nav className={styles.nav}>
           <div ref={sliderRef} className={styles.indicator}></div>
+          <button className={styles.nav__toggle} onClick={() => setHeaderOpen(!headerOpen)}>
+            <FaBarsStaggered size={25} />
+          </button>
           <div className={styles.nav__logo}>
             <h1>AP</h1>
           </div>
-          <ul>
+          <ul className={`${headerOpen ? styles.headerOpen : ''}`}>
             <li>
               <Magnetic>
                 <li
