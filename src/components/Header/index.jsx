@@ -60,6 +60,14 @@ const Header = () => {
                   onMouseEnter={(e) => sliderMouseOver(e)}
                   onMouseLeave={(e) => sliderMouseLeave(e)}
                 >
+                  Courses
+                </li>
+              </Magnetic>
+              <Magnetic>
+                <li
+                  onMouseEnter={(e) => sliderMouseOver(e)}
+                  onMouseLeave={(e) => sliderMouseLeave(e)}
+                >
                   Contact Me
                 </li>
               </Magnetic>

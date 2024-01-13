@@ -1,0 +1,68 @@
+.experiences {
+  width: 100%;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  background-color: var(--secondary-color);
+  color: white;
+  &__wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    &_cards{
+        width: 85%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 2rem;
+        margin-top: 2rem;
+        &_card{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            padding: 30px 24px;
+            border-radius: 10px; 
+            border: 1px solid var(--p-text-secondary);
+            gap: 1rem;
+            &_top{
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: start;
+                gap: .5rem;
+                img{
+                    object-fit: contain;
+                }
+                p{
+                    &:nth-child(2){
+                        flex-grow: 1;
+                        font-size: 24px;
+                        font-weight: 600;
+                        line-height: 28px;
+                        letter-spacing: -0.48px; 
+                    }
+                    &:nth-child(3){
+                        font-size: 14px;
+                        font-weight: 400;
+                        line-height: 20px;
+                        letter-spacing: -0.32px;  
+                        color: var(--small-text-color);
+                    }
+                }
+            }
+        }
+    }
+    h1 {
+      font-family: "Sora";
+      font-size: 48px;
+      font-weight: 400;
+      line-height: 56px;
+      letter-spacing: -0.96px;
+      span {
+        font-weight: 800;
+      }
+    }
+  }
+}
