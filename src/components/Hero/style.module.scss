@@ -188,6 +188,9 @@
             -o-transition: 0.3s linear;
             background-color: var(--p-text-primary);
             clip-path: circle(3rem at 50% 200%);
+            @media (max-width: 600px) {
+              clip-path: circle(3.75rem at 50% 200%);
+            }
           }
           &:hover::before {
             clip-path: circle(100%);
