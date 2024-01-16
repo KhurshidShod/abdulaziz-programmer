@@ -143,7 +143,7 @@ const Skills = () => {
               <div className={styles.skills__wrapper_cards_card_outer}></div>
               <div className={styles.skills__wrapper_cards_card_outer2}></div>
               <div className={styles.skills__wrapper_cards_card_content}>
-                <Magnetic><FaGitAlt size={80} /></Magnetic>
+                <Magnetic><div><FaGitAlt size={80} /></div></Magnetic>
                 <h1>Git</h1>
               </div>
             </div>
@@ -151,7 +151,7 @@ const Skills = () => {
               <div className={styles.skills__wrapper_cards_card_outer}></div>
               <div className={styles.skills__wrapper_cards_card_outer2}></div>
               <div className={styles.skills__wrapper_cards_card_content}>
-                <Magnetic><RiJavascriptFill size={80} /></Magnetic>
+                <Magnetic><div><RiJavascriptFill size={80} /></div></Magnetic>
                 <h1>Javascript</h1>
               </div>
             </div>
@@ -159,7 +159,7 @@ const Skills = () => {
               <div className={styles.skills__wrapper_cards_card_outer}></div>
               <div className={styles.skills__wrapper_cards_card_outer2}></div>
               <div className={styles.skills__wrapper_cards_card_content}>
-                <Magnetic><BiLogoTypescript size={80} /></Magnetic>
+                <Magnetic><div><BiLogoTypescript size={80} /></div></Magnetic>
                 <h1>Typescript</h1>
               </div>
             </div>
@@ -167,7 +167,7 @@ const Skills = () => {
               <div className={styles.skills__wrapper_cards_card_outer}></div>
               <div className={styles.skills__wrapper_cards_card_outer2}></div>
               <div className={styles.skills__wrapper_cards_card_content}>
-                <Magnetic><TbBrandNextjs size={80} /></Magnetic>
+                <Magnetic><div><TbBrandNextjs size={80} /></div></Magnetic>
                 <h1>Next.js</h1>
               </div>
             </div>
@@ -175,7 +175,7 @@ const Skills = () => {
               <div className={styles.skills__wrapper_cards_card_outer}></div>
               <div className={styles.skills__wrapper_cards_card_outer2}></div>
               <div className={styles.skills__wrapper_cards_card_content}>
-                <Magnetic><FaReact size={80} /></Magnetic>
+                <Magnetic><div><FaReact size={80} /></div></Magnetic>
                 <h1>React.Js</h1>
               </div>
             </div>
@@ -183,7 +183,7 @@ const Skills = () => {
               <div className={styles.skills__wrapper_cards_card_outer}></div>
               <div className={styles.skills__wrapper_cards_card_outer2}></div>
               <div className={styles.skills__wrapper_cards_card_content}>
-                <Magnetic><FaPython size={80} /></Magnetic>
+                <Magnetic><div><FaPython size={80} /></div></Magnetic>
                 <h1>Python</h1>
               </div>
             </div>
@@ -191,7 +191,7 @@ const Skills = () => {
               <div className={styles.skills__wrapper_cards_card_outer}></div>
               <div className={styles.skills__wrapper_cards_card_outer2}></div>
               <div className={styles.skills__wrapper_cards_card_content}>
-                <Magnetic><FaNode size={80} /></Magnetic>
+                <Magnetic><div><FaNode size={80} /></div></Magnetic>
                 <h1>Node.Js</h1>
               </div>
             </div>
@@ -199,7 +199,7 @@ const Skills = () => {
               <div className={styles.skills__wrapper_cards_card_outer}></div>
               <div className={styles.skills__wrapper_cards_card_outer2}></div>
               <div className={styles.skills__wrapper_cards_card_content}>
-                <Magnetic><FaPhp size={80} /></Magnetic>
+                <Magnetic><div><FaPhp size={80} /></div></Magnetic>
                 <h1>PHP</h1>
               </div>
             </div>
@@ -207,21 +207,21 @@ const Skills = () => {
               <div className={styles.skills__wrapper_cards_card_outer}></div>
               <div className={styles.skills__wrapper_cards_card_outer2}></div>
               <div className={styles.skills__wrapper_cards_card_content}>
-                <Magnetic><DiDjango size={80} /></Magnetic>
+                <Magnetic><div><DiDjango size={80} /></div></Magnetic>
                 <h1>Django</h1>
               </div>
-            </div>
-            <div className={styles.skills__wrapper_cards_card}>
+              </div>
+              <div className={styles.skills__wrapper_cards_card}>
               <div className={styles.skills__wrapper_cards_card_outer}></div>
               <div className={styles.skills__wrapper_cards_card_outer2}></div>
               <div className={styles.skills__wrapper_cards_card_content}>
-                <Magnetic><DiMongodb size={80} /></Magnetic>
+                <Magnetic><div><DiMongodb size={80} /></div></Magnetic>
                 <h1>MongoDB</h1>
               </div>
             </div>
-          </div>
+         </div>
         </div>
-      </div>
+        </div>
     </section>
   );
 };
