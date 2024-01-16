@@ -1,7 +1,7 @@
 import Image from "next/image";
 import styles from "./style.module.scss";
 
-export const About = () => {
+export default function About() {
   return (
     <>
       <section className={styles.about}>

@@ -1,17 +1,10 @@
-<<<<<<< HEAD
-import { About } from "@/components/About";
-import Experiences from "@/components/Experiences";
-import Header from "@/components/Header";
-import Hero from "@/components/Hero";
-import Skills from "@/components/Skills";
-=======
 "use client";
 import { useEffect } from 'react'
 import Experiences from '@/components/Experiences'
 import Header from '@/components/Header'
 import Hero from '@/components/Hero'
 import Skills from '@/components/Skills'
->>>>>>> 84da75ef4d859be77059513ab6af88f6a298faf4
+import About from '@/components/About'
 
 export default function Home() {
   useEffect(() => {

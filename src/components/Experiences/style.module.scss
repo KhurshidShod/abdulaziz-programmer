@@ -18,37 +18,9 @@
       flex-direction: column;
       gap: 2rem;
       margin-top: 2rem;
-      &_card {
+      @media (max-width: 850px){
         width: 100%;
-        display: flex;
-        flex-direction: column;
-<<<<<<< HEAD
-        padding: 30px 24px;
-        border-radius: 10px;
-        border: 1px solid var(--p-text-secondary);
-        gap: 1rem;
-        &_top {
-          width: 100%;
-          display: flex;
-          align-items: center;
-          justify-content: start;
-          gap: 0.5rem;
-          img {
-            object-fit: contain;
-          }
-          p {
-            &:nth-child(2) {
-              flex-grow: 1;
-              font-size: 24px;
-              font-weight: 600;
-              line-height: 28px;
-              letter-spacing: -0.48px;
-=======
-        gap: 2rem;
-        margin-top: 2rem;
-        @media (max-width: 850px){
-          width: 100%;
-        }
+      }
         &_card{
             width: 100%;
             display: flex;
@@ -89,7 +61,6 @@
                         color: var(--small-text-color);
                     }
                 }
->>>>>>> 84da75ef4d859be77059513ab6af88f6a298faf4
             }
             &:nth-child(3) {
               font-size: 14px;
@@ -99,7 +70,6 @@
               color: var(--small-text-color);
             }
           }
-        }
       }
     }
     h1 {
@@ -113,4 +83,3 @@
       }
     }
   }
-}
