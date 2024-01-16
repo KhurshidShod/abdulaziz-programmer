@@ -167,7 +167,7 @@ const Hero = () => {
             src="/images/heroSvgs/9.svg"
             className={styles.herosvg}
           />
-          <div className={styles.hero__wrapper_text}>
+          <div className={styles.hero__wrapper_text} data-scroll data-scroll-speed="0.3">
             <h1>
               {`Hello I'am`} <span>{`Abdulaziz Toshpo'latov. Full-Stack`}</span>{" "}
               <span>Developer</span> based in <span>Tashkent</span>

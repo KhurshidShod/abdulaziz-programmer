@@ -13,10 +13,15 @@
     justify-content: space-between;
     align-items: center;
     &__toggle{
+      display: none;
       background-color: transparent;
       border: none;
       outline: none;
       cursor: pointer;
+      color: var(--p-text-primary);
+      @media (max-width: 850px){
+        display: flex;
+      }
     }
     .indicator{
         width: 50px;
