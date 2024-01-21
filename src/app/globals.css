@@ -1,44 +1,50 @@
-@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&display=swap');
-*{
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&display=swap");
+* {
   margin: 0;
   padding: 0;
 }
 *,
 *::before,
-*::after{
+*::after {
   box-sizing: border-box;
 }
-:root{
+:root {
+  --transparent-color: #fff;
+  --descr-color: #71717a;
+  --slider-color: #101010;
   --primary-color: #ffffff;
   --secondary-color: #000000;
   --p-text-primary: #000000;
-  --p-text-secondary: #71717A;
+  --p-text-secondary: #71717a;
   --card-color: #000000;
   --text-hover: #ffffff;
-  --small-text-color: #D4D4D8;
+  --small-text-color: #d4d4d8;
 }
-body.dark{
+body.dark {
   --primary-color: #151515;
   --p-text-primary: #ffffff;
+  --descr-color: #dddddd;
   --card-color: #ffffff;
+  --transparent-color: #151515;
   --text-hover: #000000;
+  --slider-color: #f5f5f5;
 }
-body{
+body {
   background-color: var(--primary-color);
 }
-.container{
+.container {
   max-width: 1440px;
   padding-left: 80px;
   padding-right: 80px;
 }
-@media (max-width: 1000px){
-  .container{
+@media (max-width: 1000px) {
+  .container {
     padding-left: 40px;
     padding-right: 40px;
   }
 }
 @media (max-width: 850px) {
-  .container{
+  .container {
     padding-left: 20px;
     padding-right: 20px;
   }

@@ -1,13 +1,20 @@
+import Magnetic from "@/commons/Magnetic";
 import Image from "next/image";
 import styles from "./style.module.scss";
 import Slider from "react-slick";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import "./slider.css";
 
 export default function Testimonials() {
+  const addBlackCardClass = (index) => {
+    return index % 2 !== 0 ? styles.blackCard : "";
+  };
+
   const settings = {
     dots: true,
+    navs: false,
     infinite: true,
     speed: 500,
     slidesToShow: 3,
@@ -72,27 +79,38 @@ export default function Testimonials() {
           <h1>
             My <span>Testimonials</span>
           </h1>
-          <div>
+          <div className="testimonials-slider">
             <Slider {...settings}>
-              {testimonials.map((testimonial) => (
-                <div key={testimonial.id} className={styles.testimonials_card}>
-                  <div className={styles.testimonials_card_img}>
-                    <Image
-                      src={testimonial.img}
-                      alt={testimonial.name}
-                      width={50}
-                      height={50}
-                    />
-                  </div>
-                  <div className={styles.testimonials_card_descr}>
-                    {testimonial.descr}
-                  </div>
-                  <hr />
-                  <div className={styles.testimonials_card_name}>
-                    {testimonial.name}
-                  </div>
-                  <div className={styles.testimonials_card_profession}>
-                    {testimonial.profession}
+              {testimonials.map((testimonial, index) => (
+                <div
+                  key={testimonial.id}
+                  className={`${styles.testimonials_card} ${addBlackCardClass(
+                    index
+                  )}`}
+                >
+                  <div className={styles.testimonials_card_style}>
+                    <div className={styles.testimonials_card_img}>
+                      <Magnetic>
+                        <Image
+                          src={testimonial.img}
+                          alt={testimonial.name}
+                          width={50}
+                          height={50}
+                        />
+                      </Magnetic>
+                    </div>
+                    <div className={styles.testimonials_card_descr}>
+                      {testimonial.descr}
+                    </div>
+                    <Magnetic>
+                      <hr />
+                    </Magnetic>
+                    <div className={styles.testimonials_card_name}>
+                      {testimonial.name}
+                    </div>
+                    <div className={styles.testimonials_card_profession}>
+                      {testimonial.profession}
+                    </div>
                   </div>
                 </div>
               ))}

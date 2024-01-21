@@ -24,9 +24,9 @@
   border-radius: 6px;
   font-size: 18px;
   padding: 0 15px;
-  border: 2px solid #000;
+  border: 2px solid var(--card-color);
   background: transparent;
-  color: #000;
+  color: var(--card-color);
   outline: none;
 }
 .input_field textarea {
@@ -35,9 +35,9 @@
   border-radius: 6px;
   font-size: 20px;
   padding: 15px;
-  border: 2px solid #000;
+  border: 2px solid var(--card-color);
   background: transparent;
-  color: #000;
+  color: var(--card-color);
   outline: none;
   resize: none;
 }
@@ -47,7 +47,7 @@
   top: 50%;
   left: 15px;
   transform: translateY(-50%);
-  color: #000;
+  color: var(--card-color);
   font-size: 19px;
   pointer-events: none;
   transition: 0.3s;
@@ -58,11 +58,11 @@
 }
 
 .input_field input:focus {
-  border: 2px solid #000;
+  border: 2px solid var(--card-color);
 }
 
 .input_field textarea:focus {
-  border: 2px solid #000;
+  border: 2px solid var(--card-color);
 }
 
 .input_field input:focus ~ label,
@@ -72,7 +72,8 @@
   font-size: 18px;
   font-weight: 600;
   padding: 0 4px;
-  background: #fff;
+  background: var(--transparent-color);
+  color: var(--card-color);
 }
 
 .input_field textarea:focus ~ label,
@@ -81,8 +82,9 @@
   left: 15px;
   font-size: 18px;
   font-weight: 600;
+  color: var(--card-color);
   padding: 0 4px;
-  background: #fff;
+  background: var(--transparent-color);
 }
 
 .contact__wrapper_text_socials {
@@ -123,6 +125,9 @@
   align-items: center;
   justify-content: center;
 }
+.contact_text h1 {
+  color: var(--card-color);
+}
 
 .contact_text h1:first-child {
   font-size: 52px;
@@ -133,12 +138,12 @@
 }
 
 .contact_text p {
-  color: #71717a;
+  color: var(--descr-color);
   font-size: 16px;
   font-style: normal;
   margin: 20px 0;
   font-weight: 400;
-  line-height: 24px; /* 150% */
+  line-height: 24px;
   letter-spacing: 0.32px;
 }
 
