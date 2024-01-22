@@ -7,6 +7,8 @@ import Skills from "@/components/Skills";
 import About from "@/components/About";
 import Testimonials from "@/components/Testimonials";
 import Contact from "@/components/Contact";
+import Projects from "@/components/Projects";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   useEffect(() => {
@@ -23,8 +25,10 @@ export default function Home() {
       <Skills />
       <Experiences />
       <About />
+      <Projects />
       <Testimonials />
       <Contact />
+      <Footer />
     </>
   );
 }
