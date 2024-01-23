@@ -29,6 +29,14 @@ const Projects = () => {
         "I'm Evren Shah Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to specimen book.",
       link: "https://abdulaziz-programmer.uz",
     },
+    {
+      index: "04",
+      image: "/images/projects/1.jpg",
+      title: "Crypto Screener Application",
+      descr:
+        "I'm Evren Shah Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to specimen book.",
+      link: "https://abdulaziz-programmer.uz",
+    },
   ];
   return (
     <section className={styles.projects}>
@@ -69,7 +77,9 @@ const Projects = () => {
         <Magnetic>
           <button>
             <Magnetic>
-              <span>View More</span>
+              <span>
+                View More 12 <i class="fa-solid fa-chevron-down"></i>
+              </span>
             </Magnetic>
           </button>
         </Magnetic>
