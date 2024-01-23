@@ -39,7 +39,7 @@ const Card = ({i, title, description, src, url, color, progress, range, targetSc
               style={{scale: imageScale}}
             >
               <img
-                src="/images/projects/1.jpg"
+                src={src}
                 alt="image" 
               />
             </motion.div>
