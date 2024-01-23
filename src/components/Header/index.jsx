@@ -1,10 +1,11 @@
 "use client";
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import Magnetic from "@/commons/Magnetic";
 import styles from "./style.module.scss";
 import { BsMoonFill } from "react-icons/bs";
 import { FaSun } from "react-icons/fa";
 import { FaBarsStaggered } from "react-icons/fa6";
+import { Link } from 'react-scroll';
 
 const Header = () => {
     const [themeDark, setThemeDark] = useState(false);
@@ -14,6 +15,8 @@ const Header = () => {
   const sliderMouseOver = (e) => {
     const left = e.currentTarget.offsetLeft;
     const width = e.currentTarget.getBoundingClientRect().width;
+    console.log(left);
+    console.log(width);
     sliderRef.current.style.left = `${left + width / 2}px`;
     sliderRef.current.style.width = `${width}px`;
   };
@@ -35,15 +38,15 @@ const Header = () => {
             <h1>AP</h1>
           </div>
           <ul className={`${headerOpen ? styles.headerOpen : ''}`}>
-            <li>
-              <Magnetic>
-                <li
-                  onMouseEnter={(e) => sliderMouseOver(e)}
-                  onMouseLeave={(e) => sliderMouseLeave(e)}
-                >
-                  About Me
-                </li>
-              </Magnetic>
+              <Link
+              to="skills"
+              activeClass="activeHeader"
+              spy={true}
+              smooth={true}
+              offset={-100}
+              duration={700}
+              className={styles.category}
+            >
               <Magnetic>
                 <li
                   onMouseEnter={(e) => sliderMouseOver(e)}
@@ -52,6 +55,52 @@ const Header = () => {
                   Skills
                 </li>
               </Magnetic>
+            </Link>
+            <Link
+              activeClass="activeHeader"
+              to="experiences"
+              spy={true}
+              smooth={true}
+              offset={-100}
+              duration={700}
+              className={styles.category}
+            >
+              <Magnetic>
+                <li
+                  onMouseEnter={(e) => sliderMouseOver(e)}
+                  onMouseLeave={(e) => sliderMouseLeave(e)}
+                >
+                  Experiences
+                </li>
+              </Magnetic>
+            </Link>
+            <Link
+              activeClass="activeHeader"
+              to="about"
+              spy={true}
+              smooth={true}
+              offset={-100}
+              duration={700}
+              className={styles.category}
+            >
+              <Magnetic>
+                <li
+                  onMouseEnter={(e) => sliderMouseOver(e)}
+                  onMouseLeave={(e) => sliderMouseLeave(e)}
+                >
+                  About Me
+                </li>
+              </Magnetic>
+              </Link>
+            <Link
+              activeClass="activeHeader"
+              to="projects"
+              spy={true}
+              smooth={true}
+              offset={-100}
+              duration={700}
+              className={styles.category}
+            >
               <Magnetic>
                 <li
                   onMouseEnter={(e) => sliderMouseOver(e)}
@@ -60,6 +109,15 @@ const Header = () => {
                   Projects
                 </li>
               </Magnetic>
+            </Link>
+            <Link
+              activeClass="activeHeader"
+              spy={true}
+              smooth={true}
+              offset={-100}
+              duration={700}
+              className={styles.category}
+            >
               <Magnetic>
                 <li
                   onMouseEnter={(e) => sliderMouseOver(e)}
@@ -68,6 +126,16 @@ const Header = () => {
                   Courses
                 </li>
               </Magnetic>
+              </Link>
+              <Link
+              activeClass="activeHeader"
+              to="contact"
+              spy={true}
+              smooth={true}
+              offset={-100}
+              duration={700}
+              className={styles.category}
+            >
               <Magnetic>
                 <li
                   onMouseEnter={(e) => sliderMouseOver(e)}
@@ -76,7 +144,7 @@ const Header = () => {
                   Contact Me
                 </li>
               </Magnetic>
-            </li>
+              </Link>
           </ul>
           <div className={styles.nav__actions}>
           <Magnetic>

@@ -2,9 +2,11 @@ import Magnetic from "@/commons/Magnetic";
 import styles from "./style.module.scss";
 import { FaLinkedin, FaTelegram, FaYoutube } from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
+import { Element } from 'react-scroll';
 
 const Contact = () => {
   return (
+    <Element name="contact">
     <section className={styles.contact}>
       <div className="container">
         <div className={styles.contact_row}>
@@ -97,6 +99,7 @@ const Contact = () => {
         </div>
       </div>
     </section>
+    </Element>
   );
 };
 

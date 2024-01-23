@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from './style.module.scss'
 import Image from 'next/image'
+import { Element } from 'react-scroll';
 
 const Experiences = () => {
   const experiences = [
@@ -24,6 +25,7 @@ const Experiences = () => {
     }
   ]
   return (
+    <Element name="experiences">
     <section className={styles.experiences}>
         <div className="container">
             <div className={styles.experiences__wrapper}>
@@ -44,6 +46,7 @@ const Experiences = () => {
             </div>
         </div>
     </section>
+    </Element>
   )
 }
 

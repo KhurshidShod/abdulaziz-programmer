@@ -1,9 +1,10 @@
 import Image from "next/image";
 import styles from "./style.module.scss";
+import { Element } from 'react-scroll';
 
 export default function About() {
   return (
-    <>
+    <Element name="about">
       <section className={styles.about}>
         <div className="container">
           <div className={styles.about_row}>
@@ -53,6 +54,6 @@ export default function About() {
           </div>
         </div>
       </section>
-    </>
+    </Element>
   );
 };

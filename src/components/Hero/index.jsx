@@ -5,6 +5,7 @@ import Magnetic from "@/commons/Magnetic";
 import Image from "next/image";
 import { AiFillInstagram } from "react-icons/ai";
 import { FaTelegram, FaYoutube, FaLinkedin } from "react-icons/fa";
+import { Element } from 'react-scroll';
 
 const Hero = () => {
   const path = useRef(null);
@@ -110,7 +111,8 @@ const Hero = () => {
     window.addEventListener("mousemove", (e) => animateSvgs(e));
   }, []);
   return (
-    <section className={styles.hero}>
+    <Element name="hero">
+      <section className={styles.hero}>
       <div className="container">
         <div className={styles.hero__wrapper}>
           <img
@@ -234,6 +236,7 @@ const Hero = () => {
               </svg>
             </div>
     </section>
+    </Element>
   );
 };
 

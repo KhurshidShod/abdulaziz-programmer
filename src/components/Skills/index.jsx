@@ -8,9 +8,11 @@ import { FaReact } from "react-icons/fa6";
 import { FaGitAlt, FaPython, FaNode, FaPhp } from "react-icons/fa";
 import { DiDjango } from "react-icons/di";
 import Magnetic from "@/commons/Magnetic";
+import { Element } from 'react-scroll';
 
 const Skills = () => {
   return (
+    <Element name="skills">
     <section className={styles.skills}>
       <div className="container">
         <div className={styles.skills__wrapper}>
@@ -223,6 +225,7 @@ const Skills = () => {
         </div>
         </div>
     </section>
+    </Element>
   );
 };
 
