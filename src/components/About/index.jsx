@@ -1,6 +1,6 @@
 import Image from "next/image";
 import styles from "./style.module.scss";
-import { Element } from 'react-scroll';
+import { Element } from "react-scroll";
 
 export default function About() {
   return (
@@ -56,4 +56,4 @@ export default function About() {
       </section>
     </Element>
   );
-};
+}

@@ -82,47 +82,53 @@
 // };
 
 // export default Projects;
-'use client';
-import styles from './style.module.scss'
-import { projects } from '../../data';
-import { useScroll } from 'framer-motion';
-import { useEffect, useRef } from 'react';
-import Lenis from '@studio-freight/lenis'
-import Card from '../Card';
+"use client";
+import styles from "./style.module.scss";
+import { projects } from "../../data";
+import { useScroll } from "framer-motion";
+import { useEffect, useRef } from "react";
+import Lenis from "@studio-freight/lenis";
+import Card from "../Card";
 
 function Projects() {
   const container = useRef(null);
   const { scrollYProgress } = useScroll({
     target: container,
-    offset: ['start start', 'end end']
-  })
+    offset: ["start start", "end end"],
+  });
 
-  useEffect( () => {
-    const lenis = new Lenis()
+  useEffect(() => {
+    const lenis = new Lenis();
 
     function raf(time) {
-      lenis.raf(time)
-      requestAnimationFrame(raf)
+      lenis.raf(time);
+      requestAnimationFrame(raf);
     }
 
-    requestAnimationFrame(raf)
-  })
+    requestAnimationFrame(raf);
+  });
 
   return (
-    <section ref={container} className={styles.projects}>
-      <div className="container">
-        <div className={styles.projects__wrapper}>
-          <h1>My Projects</h1>
-        {
-        projects.map( (project, i) => {
-          const targetScale = 1 - ( (projects.length - i) * 0.05);
-          return <Card key={`p_${i}`} i={i} {...project} progress={scrollYProgress} range={[i * .25, 1]} targetScale={targetScale}/>
-        })
-      }
-        </div>
-      </div>
+    <section ref={container} className={styles.main}>
+      <h1>
+        My <span>Projects</span>
+      </h1>
+      <br />
+      {projects.map((project, i) => {
+        const targetScale = 1 - (projects.length - i) * 0.05;
+        return (
+          <Card
+            key={`p_${i}`}
+            i={i}
+            {...project}
+            progress={scrollYProgress}
+            range={[i * 0.25, 1]}
+            targetScale={targetScale}
+          />
+        );
+      })}
     </section>
-  )
+  );
 }
 
 export default Projects;

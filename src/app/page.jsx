@@ -9,6 +9,7 @@ import Testimonials from "@/components/Testimonials";
 import Contact from "@/components/Contact";
 import Projects from "@/components/Projects";
 import Footer from "@/components/Footer";
+import Loader from "@/components/Loader";
 
 export default function Home() {
   useEffect(() => {
@@ -20,6 +21,7 @@ export default function Home() {
   }, []);
   return (
     <>
+      <Loader />
       <Header />
       <Hero />
       <Skills />
