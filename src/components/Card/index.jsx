@@ -26,10 +26,11 @@ const Card = ({i, title, description, src, url, color, progress, range, targetSc
           <div className={styles.description}>
             <p style={{color: color === '#fff' ? "#000" : "#fff"}}>{description}</p>
             <span>
-              <a style={{color: color === '#fff' ? "#000" : "#fff"}} href={url} target="_blank">See more</a>
-              <svg width="22" height="12" viewBox="0 0 22 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M21.5303 6.53033C21.8232 6.23744 21.8232 5.76256 21.5303 5.46967L16.7574 0.696699C16.4645 0.403806 15.9896 0.403806 15.6967 0.696699C15.4038 0.989592 15.4038 1.46447 15.6967 1.75736L19.9393 6L15.6967 10.2426C15.4038 10.5355 15.4038 11.0104 15.6967 11.3033C15.9896 11.5962 16.4645 11.5962 16.7574 11.3033L21.5303 6.53033ZM0 6.75L21 6.75V5.25L0 5.25L0 6.75Z" fill="black"/>
-              </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+  <path d="M10.8333 9.16658L17.6667 2.33325" stroke={color === '#fff' ? "#000" : "#fff"} stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M18.3333 5.66675V1.66675H14.3333" stroke={color === '#fff' ? "#000" : "#fff"} stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M9.16667 1.66675H7.5C3.33333 1.66675 1.66667 3.33341 1.66667 7.50008V12.5001C1.66667 16.6667 3.33333 18.3334 7.5 18.3334H12.5C16.6667 18.3334 18.3333 16.6667 18.3333 12.5001V10.8334" stroke={color === '#fff' ? "#000" : "#fff"} stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
             </span>
           </div>
 

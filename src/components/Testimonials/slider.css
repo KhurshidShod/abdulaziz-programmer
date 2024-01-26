@@ -2,17 +2,3 @@
 .testimonials-slider .slick-next {
   display: none !important;
 }
-
-.testimonials-slider .slick-dots li button {
-  transition: 0.5s all !important;
-  color: var(--slider-color) !important;
-}
-
-.testimonials-slider .slick-dots li button::before {
-  font-size: 12px !important;
-  color: var(--slider-color) !important;
-}
-.testimonials-slider .slick-active button::before {
-  opacity: 1 !important;
-  color: var(--slider-color) !important;
-}

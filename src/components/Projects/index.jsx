@@ -109,13 +109,18 @@ function Projects() {
   })
 
   return (
-    <section ref={container} className={styles.main}>
-      {
+    <section ref={container} className={styles.projects}>
+      <div className="container">
+        <div className={styles.projects__wrapper}>
+          <h1>My Projects</h1>
+        {
         projects.map( (project, i) => {
           const targetScale = 1 - ( (projects.length - i) * 0.05);
           return <Card key={`p_${i}`} i={i} {...project} progress={scrollYProgress} range={[i * .25, 1]} targetScale={targetScale}/>
         })
       }
+        </div>
+      </div>
     </section>
   )
 }

@@ -52,3 +52,58 @@ body {
     padding-right: 20px;
   }
 }
+.slick-dots li{
+  margin: 0 !important;
+}
+.slick-dots li{
+  width: 10px;
+  height: 10px;
+}
+.slick-dots li button{
+  position: relative !important;
+  width: 10px !important;
+  height: 10px !important;
+  background-color: var(--p-text-primary) !important;
+  border-radius: 50%;
+  transition: .1s linear;
+}
+.slick-dots li.slick-active button::before{
+  transform: scale(1);
+  opacity: 1 !important;
+}
+.slick-dots li button::before{
+  position: absolute !important;
+  width: 20px;
+  height: 20px;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  border-radius: 50%;
+  border: 2px solid var(--p-text-primary);
+  color: transparent !important;
+  transition: .1s linear;
+  transform: scale(0);
+  opacity: 0 !important;
+}
+/* .slick-dots li button{
+  position: relative !important;
+  padding: 0 !important;
+}
+.slick-dots li button::before{
+  border-radius: 20px;
+  width: 10px !important;
+  height: 10px !important;
+  color: transparent !important;
+  background-color: var(--p-text-primary);
+  opacity: 1 !important;
+  position: absolute !important;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+}
+.slick-dots li.slick-active button::before{
+  width: 30px !important;
+  height: 10px !important;
+  background-color: var(--p-text-primary) !important;
+  color: transparent !important;
+} */
