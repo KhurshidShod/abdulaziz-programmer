@@ -18,23 +18,14 @@ const Statistics = () => {
 
   return (
     <section className={styles.statistics}>
-      <div className="container">
-        <div className={styles.statistics__wrapper}>
-          <h1>
-            <span>My results</span> in numbers
-          </h1>
-          <div className={styles.statistics__wrapper_stats}>
-            {Object.keys(statisticsData).map((stat) => (
-              <div key={stat} className={styles.statistics__wrapper_stats_stat}>
-                <p>{stat}</p>{" "}
-                <h1>
-                  <CountUp end={statisticsData[stat]} enableScrollSpy />+
-                </h1>
-              </div>
-            ))}
-          </div>
+        <div className="container">
+            <div className={styles.statistics__wrapper}>
+                <h1><span>My results</span> in numbers</h1>
+                <div className={styles.statistics__wrapper_stats}>
+                    {Object.keys(statisticsData).map(stat => <div key={stat} className={styles.statistics__wrapper_stats_stat}><p>{stat}</p> <h1><CountUp end={statisticsData[stat]} enableScrollSpy /><span className={styles.plusIcon}>+</span></h1></div>)}
+                </div>
+            </div>
         </div>
-      </div>
     </section>
   );
 };
