@@ -9,7 +9,7 @@ export default function About() {
         <div className="container">
           <div className={styles.about_row}>
             <div className={styles.about_row_side}>
-              <div className={styles.about_image}>
+              <div className={styles.about_image} data-scroll="" data-scroll-direction="horizontal" data-scroll-speed="0.2">
                 <Image
                   src={"/images/ap.png"}
                   width={490}
