@@ -76,24 +76,6 @@ const Header = () => {
             </Link>
             <Link
               activeClass="activeHeader"
-              to="about"
-              spy={true}
-              smooth={true}
-              offset={-100}
-              duration={700}
-              className={styles.category}
-            >
-              <Magnetic>
-                <li
-                  onMouseEnter={(e) => sliderMouseOver(e)}
-                  onMouseLeave={(e) => sliderMouseLeave(e)}
-                >
-                  About Me
-                </li>
-              </Magnetic>
-              </Link>
-            <Link
-              activeClass="activeHeader"
               to="projects"
               spy={true}
               smooth={true}
