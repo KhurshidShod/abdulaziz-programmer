@@ -3,9 +3,11 @@
   background-color: var(--primary-color);
   font-family: "Sora";
   .line {
-    height: 1px;
+    height: 0px;
     margin-bottom: 20px;
     width: 100%;
+    background: transparent;
+    color: transparent;
     position: relative;
     @media (max-width: 850px) {
       display: none;
@@ -17,7 +19,7 @@
       top: -250px;
       path {
         stroke: var(--p-text-primary);
-        stroke-width: 2px;
+        stroke-width: 0px;
         fill: none;
       }
     }
@@ -107,7 +109,7 @@
         }
       }
       p {
-        color: var(--p-text-secondary);
+        color: var(--descr-color);
         margin-top: 2rem;
         font-size: 16px;
         font-weight: 400;
@@ -193,9 +195,13 @@
       z-index: 0;
       @media (max-width: 850px) {
         width: 100%;
+        margin: 20px 0 -10px 0 !important;
       }
       img {
         width: 100% !important;
+        border-radius: 50% !important;
+        filter: grayscale(50%);
+        border: 2px solid var(--p-text-primary);
         height: 100% !important;
       }
     }

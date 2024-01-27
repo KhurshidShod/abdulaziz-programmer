@@ -5,12 +5,12 @@ import styles from "./style.module.scss";
 import { BsMoonFill } from "react-icons/bs";
 import { FaSun } from "react-icons/fa";
 import { FaBarsStaggered } from "react-icons/fa6";
-import { Link } from 'react-scroll';
+import { Link } from "react-scroll";
 
 const Header = () => {
-    const [themeDark, setThemeDark] = useState(false);
+  const [themeDark, setThemeDark] = useState(false);
   const sliderRef = useRef(null);
-  const [headerOpen, setHeaderOpen] = useState(false)
+  const [headerOpen, setHeaderOpen] = useState(false);
 
   const sliderMouseOver = (e) => {
     const left = e.currentTarget.offsetLeft;
@@ -31,14 +31,17 @@ const Header = () => {
       <div className="container">
         <nav className={styles.nav}>
           <div ref={sliderRef} className={styles.indicator}></div>
-          <button className={styles.nav__toggle} onClick={() => setHeaderOpen(!headerOpen)}>
+          <button
+            className={styles.nav__toggle}
+            onClick={() => setHeaderOpen(!headerOpen)}
+          >
             <FaBarsStaggered size={25} />
           </button>
           <div className={styles.nav__logo}>
-            <h1>AP</h1>
+            <h1 onClick={() => window.location.reload()}>AP</h1>
           </div>
-          <ul className={`${headerOpen ? styles.headerOpen : ''}`}>
-              <Link
+          <ul className={`${headerOpen ? styles.headerOpen : ""}`}>
+            <Link
               to="skills"
               activeClass="activeHeader"
               spy={true}
@@ -108,8 +111,8 @@ const Header = () => {
                   Courses
                 </li>
               </Magnetic>
-              </Link>
-              <Link
+            </Link>
+            <Link
               activeClass="activeHeader"
               to="contact"
               spy={true}
@@ -126,26 +129,32 @@ const Header = () => {
                   Contact Me
                 </li>
               </Magnetic>
-              </Link>
+            </Link>
           </ul>
           <div className={styles.nav__actions}>
-          <Magnetic>
-            <button onMouseEnter={(e) => {
-                const left = e.currentTarget.offsetLeft;
-                const width = e.currentTarget.getBoundingClientRect().width;
-                sliderRef.current.style.left = `${left + width / 2}px`;
-                sliderRef.current.style.width = `5px`;
-                sliderRef.current.style.height = `5px`;
-                sliderRef.current.style.borderRadius = `50%`;
-            }} onMouseLeave={(e) => {
-                sliderRef.current.style.left = `15px`;
-                sliderRef.current.style.width = `50px`;
-                sliderRef.current.style.height = `3px`;
-                sliderRef.current.style.borderRadius = `15px`;
-              }} onClick={() => {
-                document.body.classList.toggle("dark");
-                setThemeDark(!themeDark)
-            }}>{themeDark ? <FaSun size={20} /> : <BsMoonFill size={20} />}</button>
+            <Magnetic>
+              <button
+                onMouseEnter={(e) => {
+                  const left = e.currentTarget.offsetLeft;
+                  const width = e.currentTarget.getBoundingClientRect().width;
+                  sliderRef.current.style.left = `${left + width / 2}px`;
+                  sliderRef.current.style.width = `5px`;
+                  sliderRef.current.style.height = `5px`;
+                  sliderRef.current.style.borderRadius = `50%`;
+                }}
+                onMouseLeave={(e) => {
+                  sliderRef.current.style.left = `15px`;
+                  sliderRef.current.style.width = `50px`;
+                  sliderRef.current.style.height = `3px`;
+                  sliderRef.current.style.borderRadius = `15px`;
+                }}
+                onClick={() => {
+                  document.body.classList.toggle("dark");
+                  setThemeDark(!themeDark);
+                }}
+              >
+                {themeDark ? <FaSun size={20} /> : <BsMoonFill size={20} />}
+              </button>
             </Magnetic>
           </div>
         </nav>
