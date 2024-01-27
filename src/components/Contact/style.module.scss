@@ -13,6 +13,22 @@
   width: 50%;
 }
 
+.mask_input::placeholder {
+  color: var(--card-color);
+}
+
+.input_field:nth-of-type(3) label {
+  position: absolute;
+  top: 100%;
+  left: 15px;
+  transform: translateY(50%);
+  color: transparent !important;
+  background: transparent !important;
+  font-size: 19px;
+  pointer-events: none;
+  transition: 0.3s;
+}
+
 .input_field {
   position: relative;
   margin: 25px 0;
@@ -85,6 +101,20 @@
   color: var(--card-color);
   padding: 0 4px;
   background: var(--transparent-color);
+}
+
+.input_field:nth-of-type(3) input:focus ~ label {
+  transition: 0.2s all;
+  display: block;
+  top: -2% !important;
+  left: 15px !important;
+  font-size: 18px !important;
+  transform: translateY(-50%) !important;
+
+  font-weight: 600 !important;
+  color: var(--card-color) !important;
+  padding: 0 4px !important;
+  background: var(--transparent-color) !important;
 }
 
 .contact__wrapper_text_socials {
