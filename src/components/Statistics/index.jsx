@@ -15,6 +15,7 @@ const Statistics = () => {
     enableScrollSpy: true,
     scrollSpyDelay: 3000,
   });
+
   return (
     <section className={styles.statistics}>
       <div className="container">
