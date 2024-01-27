@@ -1,10 +1,9 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import Experiences from "@/components/Experiences";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Skills from "@/components/Skills";
-import About from "@/components/About";
 import Testimonials from "@/components/Testimonials";
 import Statistics from "@/components/Statistics";
 import Contact from "@/components/Contact";
@@ -28,7 +27,6 @@ export default function Home() {
       <Hero />
       <Skills />
       <Experiences />
-      <About />
       <Projects />
       <Statistics />
       <Testimonials />

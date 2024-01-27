@@ -7,33 +7,24 @@ import Lenis from "@studio-freight/lenis";
 import Card from "../Card";
 import { Element } from "react-scroll";
 
-const Projects = () => {
-  const projects = [
-    {
-      index: "01",
-      image: "/images/projects/1.jpg",
-      title: "Crypto Screener Application",
-      descr:
-        "I'm Evren Shah Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to specimen book.",
-      link: "https://abdulaziz-programmer.uz",
-    },
-    {
-      index: "02",
-      image: "/images/projects/2.jpg",
-      title: "Crypto Screener Application",
-      descr:
-        "I'm Evren Shah Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to specimen book.",
-      link: "https://abdulaziz-programmer.uz",
-    },
-    {
-      index: "03",
-      image: "/images/projects/3.jpg",
-      title: "Crypto Screener Application",
-      descr:
-        "I'm Evren Shah Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to specimen book.",
-      link: "https://abdulaziz-programmer.uz",
-    },
-  ];
+function Projects() {
+  const container = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: container,
+    offset: ["start start", "end end"],
+  });
+
+  useEffect(() => {
+    const lenis = new Lenis();
+
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+  });
+
   return (
     <Element name="projects">
       <section ref={container} className={styles.main}>
@@ -57,6 +48,6 @@ const Projects = () => {
       </section>
     </Element>
   );
-};
+}
 
 export default Projects;

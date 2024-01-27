@@ -106,7 +106,11 @@ const Hero = () => {
                 </Magnetic>
               </div>
             </div>
-            <div className={styles.hero__wrapper_image}>
+            <div
+              className={styles.hero__wrapper_image}
+              data-scroll
+              data-scroll-speed="0.3"
+            >
               <Image
                 src="/images/ap.png"
                 alt="A guy"
@@ -114,13 +118,6 @@ const Hero = () => {
                 height={600}
               />
             </div>
-          </div>
-          <div
-            className={styles.hero__wrapper_image}
-            data-scroll
-            data-scroll-speed="0.3"
-          >
-            <Image src="/images/ap.png" alt="A guy" width={700} height={600} />
           </div>
         </div>
       </section>

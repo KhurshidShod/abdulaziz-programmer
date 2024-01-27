@@ -17,7 +17,7 @@ export default function Testimonials() {
     navs: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: 1.7,
     slidesToScroll: 1,
     responsive: [
       {
@@ -42,7 +42,7 @@ export default function Testimonials() {
       id: 1,
       img: "/images/person/person1.svg",
       descr:
-        "I recently had to jump on 10+ different calls across eight different countries to find the right owner.",
+        "I recently had to jump on 10+ different calls across eight different countries to find the right owner. Calls across eight different countries to find the right owner. And now ....",
       name: "John Doe",
       profession: "Designer",
     },
@@ -50,7 +50,7 @@ export default function Testimonials() {
       id: 2,
       img: "/images/person/person2.svg",
       descr:
-        "I recently had to jump on 10+ different calls across eight different countries to find the right owner.",
+        "I recently had to jump on 10+ different calls across eight different countries to find the right owner. Calls across eight different countries to find the right owner. And now ....",
       name: "John Doe",
       profession: "Designer",
     },
@@ -58,7 +58,7 @@ export default function Testimonials() {
       id: 3,
       img: "/images/person/person1.svg",
       descr:
-        "I recently had to jump on 10+ different calls across eight different countries to find the right owner.",
+        "I recently had to jump on 10+ different calls across eight different countries to find the right owner. Calls across eight different countries to find the right owner. And now ....",
       name: "John Doe",
       profession: "Designer",
     },
@@ -66,7 +66,7 @@ export default function Testimonials() {
       id: 4,
       img: "/images/person/person2.svg",
       descr:
-        "I recently had to jump on 10+ different calls across eight different countries to find the right owner.",
+        "I recently had to jump on 10+ different calls across eight different countries to find the right owner. Calls across eight different countries to find the right owner. And now ....",
       name: "John Doe",
       profession: "Designer",
     },
@@ -77,7 +77,7 @@ export default function Testimonials() {
       <section className={styles.testimonials}>
         <div className="container">
           <h1>
-            My <span>Testimonials</span>
+            My <span>Students</span>
           </h1>
           <div className="testimonials-slider">
             <Slider {...settings}>
@@ -89,27 +89,23 @@ export default function Testimonials() {
                   )}`}
                 >
                   <div className={styles.testimonials_card_style}>
-                    <div className={styles.testimonials_card_img}>
-                      <Magnetic>
-                        <Image
-                          src={testimonial.img}
-                          alt={testimonial.name}
-                          width={50}
-                          height={50}
-                        />
-                      </Magnetic>
+                    <div className={styles.testimonials_card_header}>
+                      <Image
+                        src={testimonial.img}
+                        alt={testimonial.name}
+                        width={70}
+                        height={70}
+                      />
+                      <div>
+                        <h2>{testimonial.name}</h2>
+                        <p>{testimonial.profession}</p>
+                      </div>
                     </div>
                     <div className={styles.testimonials_card_descr}>
                       {testimonial.descr}
                     </div>
-                    <Magnetic>
-                      <hr />
-                    </Magnetic>
-                    <div className={styles.testimonials_card_name}>
-                      {testimonial.name}
-                    </div>
-                    <div className={styles.testimonials_card_profession}>
-                      {testimonial.profession}
+                    <div className={styles.testimonials_card_rate}>
+                      <b>5.0</b> <b>&#9733; &#9733; &#9733; &#9733; &#9733;</b>
                     </div>
                   </div>
                 </div>

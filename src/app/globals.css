@@ -70,26 +70,26 @@ body {
     padding-right: 20px;
   }
 }
-.slick-dots li{
+.slick-dots li {
   margin: 0 !important;
 }
-.slick-dots li{
+.slick-dots li {
   width: 10px;
   height: 10px;
 }
-.slick-dots li button{
+.slick-dots li button {
   position: relative !important;
   width: 10px !important;
   height: 10px !important;
   background-color: var(--p-text-primary) !important;
   border-radius: 50%;
-  transition: .1s linear;
+  transition: 0.1s linear;
 }
-.slick-dots li.slick-active button::before{
+.slick-dots li.slick-active button::before {
   transform: scale(1);
   opacity: 1 !important;
 }
-.slick-dots li button::before{
+.slick-dots li button::before {
   position: absolute !important;
   width: 20px;
   height: 20px;
@@ -99,7 +99,7 @@ body {
   border-radius: 50%;
   border: 2px solid var(--p-text-primary);
   color: transparent !important;
-  transition: .1s linear;
+  transition: 0.1s linear;
   transform: scale(0);
   opacity: 0 !important;
 }
