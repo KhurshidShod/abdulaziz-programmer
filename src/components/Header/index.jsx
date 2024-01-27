@@ -11,6 +11,20 @@ const Header = () => {
   const [themeDark, setThemeDark] = useState(false);
   const sliderRef = useRef(null);
   const [headerOpen, setHeaderOpen] = useState(false);
+  const [shrink, setShrink] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const isShrink = window.scrollY > 100;
+      setShrink(isShrink);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const sliderMouseOver = (e) => {
     const left = e.currentTarget.offsetLeft;
@@ -27,7 +41,7 @@ const Header = () => {
     sliderRef.current.style.borderRadius = `15px`;
   };
   return (
-    <header className={styles.header}>
+    <header className={`${styles.header} ${shrink ? styles.shrink : ""}`}>
       <div className="container">
         <nav className={styles.nav}>
           <div ref={sliderRef} className={styles.indicator}></div>
@@ -74,6 +88,24 @@ const Header = () => {
                   onMouseLeave={(e) => sliderMouseLeave(e)}
                 >
                   Experiences
+                </li>
+              </Magnetic>
+            </Link>
+            <Link
+              activeClass="activeHeader"
+              to="students"
+              spy={true}
+              smooth={true}
+              offset={-100}
+              duration={700}
+              className={styles.category}
+            >
+              <Magnetic>
+                <li
+                  onMouseEnter={(e) => sliderMouseOver(e)}
+                  onMouseLeave={(e) => sliderMouseLeave(e)}
+                >
+                  Students
                 </li>
               </Magnetic>
             </Link>

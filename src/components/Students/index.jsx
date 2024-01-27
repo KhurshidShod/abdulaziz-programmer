@@ -6,6 +6,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./slider.css";
+import { Element } from "react-scroll";
 
 export default function Testimonials() {
   const addBlackCardClass = (index) => {
@@ -73,7 +74,7 @@ export default function Testimonials() {
   ];
 
   return (
-    <>
+    <Element name="students">
       <section className={styles.testimonials}>
         <div className="container">
           <h1>
@@ -114,6 +115,6 @@ export default function Testimonials() {
           </div>
         </div>
       </section>
-    </>
+    </Element>
   );
 }

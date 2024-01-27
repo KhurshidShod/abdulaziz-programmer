@@ -1,12 +1,23 @@
+.shrink {
+  transition: 0.2s all;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  .nav {
+    transition: 0.2s all;
+    height: 80px !important;
+  }
+}
+
 .header {
+  transition: 0.2s all;
   position: fixed;
   top: 0;
   width: 100%;
   background-color: var(--primary-color);
   font-family: "Sora";
   z-index: 999;
-  padding-left: 15px;
+  padding-left: 12px;
   .nav {
+    transition: 0.2s all;
     position: relative;
     width: 100%;
     height: 90px;
