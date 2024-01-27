@@ -21,7 +21,7 @@ const Statistics = () => {
             <div className={styles.statistics__wrapper}>
                 <h1><span>My results</span> in numbers</h1>
                 <div className={styles.statistics__wrapper_stats}>
-                    {Object.keys(statisticsData).map(stat => <div className={styles.statistics__wrapper_stats_stat}><p>{stat}</p> <h1><CountUp end={statisticsData[stat]} enableScrollSpy />+</h1></div>)}
+                    {Object.keys(statisticsData).map(stat => <div key={stat} className={styles.statistics__wrapper_stats_stat}><p>{stat}</p> <h1><CountUp end={statisticsData[stat]} enableScrollSpy />+</h1></div>)}
                 </div>
             </div>
         </div>
