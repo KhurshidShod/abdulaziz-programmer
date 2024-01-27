@@ -40,14 +40,14 @@ export default function About() {
                   way. Now, in my early thirties, 7 years after starting my web
                   development journey, I`m building cutting-edge web
                   applications using modern technologies such as Next.js,
-                  TypeScript, Nestjs, Tailwindcss, Supabase and much more.
+                  TypeScript, Nestjs, Tailwindcss, Supabase and much
                 </p>
                 <p>
                   When I`m not in full-on developer mode, you can find me
                   hovering around on twitter or on indie hacker, witnessing the
                   journey of early startups or enjoying some free time. You can
                   follow me on Twitter where I share tech-related bites and
-                  build in public, or you can follow me on GitHub.
+                  build in public, or you can follow
                 </p>
               </div>
             </div>

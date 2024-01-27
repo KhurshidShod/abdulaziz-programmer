@@ -12,18 +12,17 @@ import Footer from "@/components/Footer";
 import Loader from "@/components/Loader";
 
 export default function Home() {
-  const [loading, setLoading] = useState(true);
   useEffect(() => {
     (async () => {
       const LocomotiveScroll = (await import("locomotive-scroll")).default;
 
       const locomotiveScroll = new LocomotiveScroll();
     })();
-    window.addEventListener("load", () => setLoading(false))
+    window.addEventListener("load", () => setLoading(false));
   }, []);
   return (
     <>
-      {loading ? null : <Loader />}
+      <Loader />
       <Header />
       <Hero />
       <Skills />

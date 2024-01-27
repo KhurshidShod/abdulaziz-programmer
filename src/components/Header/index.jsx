@@ -38,7 +38,7 @@ const Header = () => {
             <FaBarsStaggered size={25} />
           </button>
           <div className={styles.nav__logo}>
-            <h1>AP</h1>
+            <h1 onClick={() => window.location.reload()}>AP</h1>
           </div>
           <ul className={`${headerOpen ? styles.headerOpen : ""}`}>
             <Link

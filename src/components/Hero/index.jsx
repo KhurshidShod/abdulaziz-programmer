@@ -237,6 +237,23 @@ const Hero = () => {
             </div>
           </div>
         </div>
+        <div className={styles.line}>
+          <div
+            onMouseEnter={() => {
+              manageMouseEnter();
+            }}
+            onMouseMove={(e) => {
+              manageMouseMove(e);
+            }}
+            onMouseLeave={() => {
+              manageMouseLeave();
+            }}
+            className={styles.box}
+          ></div>
+          <svg>
+            <path ref={path}></path>
+          </svg>
+        </div>
       </section>
     </Element>
   );
