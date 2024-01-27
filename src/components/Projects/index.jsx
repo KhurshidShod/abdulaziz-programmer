@@ -28,7 +28,9 @@ function Projects() {
   return (
     <Element name="projects">
       <section ref={container} className={styles.main}>
-        <h1>
+        <div className="container">
+          <div className={styles.main__wrapper}>
+          <h1>
           My <span>Projects</span>
         </h1>
         <br />
@@ -45,6 +47,8 @@ function Projects() {
             />
           );
         })}
+          </div>
+        </div>
       </section>
     </Element>
   );

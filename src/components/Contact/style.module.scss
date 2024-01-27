@@ -159,14 +159,21 @@
   color: var(--card-color);
 }
 
-.contact_text h1:first-child {
+.contact_text h1 {
   font-size: 52px;
   font-style: normal;
   font-weight: 800;
   line-height: 56px;
   letter-spacing: -0.96px;
 }
-
+.contact_text{
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+  b{
+    margin-top: 1rem;
+  }
+}
 .contact_text p {
   color: var(--descr-color);
   font-size: 16px;
@@ -185,6 +192,9 @@
   .contact_row {
     display: flex;
     flex-direction: column-reverse;
+    .contact_text h1 {
+      font-size: 42px;
+    }
   }
   .contact_row_side {
     width: 100%;

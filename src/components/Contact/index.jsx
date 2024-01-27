@@ -100,8 +100,8 @@ const Contact = () => {
                   high-engaging, user-friendly, and memorable interactive
                   experiences.
                 </p>
-                <h1>abdulazizleader@gmail.com</h1>
-                <h1>+998 90 234 32 32</h1>
+                <b>abdulazizleader@gmail.com</b>
+                <b>+998 90 234 32 32</b>
               </div>
             </div>
           </div>
