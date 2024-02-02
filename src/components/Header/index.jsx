@@ -52,10 +52,11 @@ const Header = () => {
             <FaBarsStaggered size={25} />
           </button>
           <div className={styles.nav__logo}>
-            <h1 onClick={() => window.location.reload()}>AP</h1>
+            <h1 onClick={() => (window.location.href = "/")}>AP</h1>
           </div>
           <ul className={`${headerOpen ? styles.headerOpen : ""}`}>
             <Link
+              href="/"
               to="skills"
               activeClass="activeHeader"
               spy={true}
@@ -74,6 +75,7 @@ const Header = () => {
               </Magnetic>
             </Link>
             <Link
+              href="/"
               activeClass="activeHeader"
               to="experiences"
               spy={true}
@@ -92,6 +94,7 @@ const Header = () => {
               </Magnetic>
             </Link>
             <Link
+              href="/"
               activeClass="activeHeader"
               to="students"
               spy={true}
@@ -110,6 +113,7 @@ const Header = () => {
               </Magnetic>
             </Link>
             <Link
+              href="/"
               activeClass="activeHeader"
               to="projects"
               spy={true}
@@ -128,6 +132,7 @@ const Header = () => {
               </Magnetic>
             </Link>
             <Link
+              href="/courses"
               activeClass="activeHeader"
               spy={true}
               smooth={true}
@@ -145,6 +150,7 @@ const Header = () => {
               </Magnetic>
             </Link>
             <Link
+              href="/"
               activeClass="activeHeader"
               to="contact"
               spy={true}
