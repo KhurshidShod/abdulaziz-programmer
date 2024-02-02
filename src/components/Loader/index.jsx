@@ -3,6 +3,7 @@
 import Image from "next/image";
 import "./style.css";
 import { useEffect, useState } from "react";
+import { TypeAnimation } from "react-type-animation";
 
 const Loader = () => {
   const [isVisible, setIsVisible] = useState(true);
@@ -15,7 +16,17 @@ const Loader = () => {
   }, []);
   return (
     <div className={`loader ${isVisible ? "visible" : "hidden"}`}>
-      <Image src={"/images/loader.svg"} alt="loader" width={200} height={160} />
+      <TypeAnimation
+        sequence={[
+          "Hello, Welcome to ABDULAZIZ-PROGRAMMER.UZ",
+          1000,
+          "Loading...",
+          3000,
+        ]}
+        wrapper="span"
+        speed={70}
+        repeat={Infinity}
+      />
     </div>
   );
 };

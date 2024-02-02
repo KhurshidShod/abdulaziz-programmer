@@ -29,7 +29,7 @@ const Experiences = () => {
       <section className={styles.experiences}>
         <div className="container">
           <div className={styles.experiences__wrapper}>
-            <h1 data-scroll data-scroll-speed="0.075">
+            <h1>
               My <span>Experiences</span>
             </h1>
             <div className={styles.experiences__wrapper_cards}>

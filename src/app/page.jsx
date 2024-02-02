@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import Experiences from "@/components/Experiences";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
@@ -12,18 +12,16 @@ import Footer from "@/components/Footer";
 import Loader from "@/components/Loader";
 
 export default function Home() {
-  const [loading, setLoading] = useState(true);
   useEffect(() => {
     (async () => {
       const LocomotiveScroll = (await import("locomotive-scroll")).default;
 
       const locomotiveScroll = new LocomotiveScroll();
     })();
-    window.addEventListener("load", () => setLoading(false));
   }, []);
   return (
     <>
-      {loading ? <Loader /> : null}
+      <Loader />
       <Header />
       <Hero />
       <Skills />
